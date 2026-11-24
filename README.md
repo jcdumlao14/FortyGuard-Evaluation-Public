@@ -29,21 +29,21 @@ An independent technical evaluation of FortyGuard's Heatmap API and temperature 
 
 ```text
 FortyGuard-Evaluation-Public/
-├── api/
-│   ├── inspect_heatmap.py
-│   ├── inspect_statistics.py
-│   ├── scan_json_security.py
-│   ├── test_heatmap.py
-│   └── validate_heatmap.py
-├── reports/
-│   ├── api_evaluation_report.md
-│   ├── environmental_parameters_evaluation.md
-│   ├── final_evaluation_summary.md
-│   ├── mcp_evaluation_report.md
-│   └── monitoring_alerts_evaluation.md
-├── .gitignore
-├── README.md
-└── requirements.txt
+|-- api/
+|   |-- inspect_heatmap.py
+|   |-- inspect_statistics.py
+|   |-- scan_json_security.py
+|   |-- test_heatmap.py
+|   `-- validate_heatmap.py
+|-- reports/
+|   |-- api_evaluation_report.md
+|   |-- environmental_parameters_evaluation.md
+|   |-- final_evaluation_summary.md
+|   |-- mcp_evaluation_report.md
+|   `-- monitoring_alerts_evaluation.md
+|-- .gitignore
+|-- README.md
+`-- requirements.txt
 ```
 
 API-generated JSON result files are local outputs and are not included in this public repository. They are written to `results/` when the API test or validation script is run; review them for sensitive response data before sharing. The `results/` directory is excluded from version control.
@@ -85,7 +85,7 @@ python api/test_heatmap.py
 
 **Important:** This script submits a real API request. Confirm account authorization and credit costs before running it again.
 
-The tested request used a documented New York sample area, July 15, 2024, at 14:00, with 100-meter granularity.
+The tested request used a documented sample area, historical date/time, and 100-meter granularity.
 
 ## 6. Result Inspection and Validation
 
@@ -111,17 +111,7 @@ These inspection scripts use previously saved result files and do not submit new
 
 ## 7. API Evaluation Results
 
-The initial successful API test returned:
-
-- 150 GeoJSON temperature features.
-- Valid polygon geometries across the inspected features.
-- 150 valid temperature values.
-- Minimum temperature: 31.887°C.
-- Maximum temperature: 33.1424°C.
-- Mean temperature: approximately 32.2552°C.
-- Standard deviation: approximately 0.41494°C.
-
-The reported standard deviation was consistent with the independently calculated sample standard deviation.
+The initial successful API test returned 150 GeoJSON temperature features, with valid polygon geometries and temperature values. The reported standard deviation was consistent with the independently calculated sample standard deviation.
 
 These results describe one test request and do not establish independent temperature accuracy.
 
