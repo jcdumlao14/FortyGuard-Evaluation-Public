@@ -1,0 +1,15 @@
+﻿# Environment and secrets
+.env
+results/
+
+# Python
+.venv/
+__pycache__/
+*.py[cod]
+
+# Test and temporary files
+.pytest_cache/
+.coverage
+
+# IDE
+.vscode/
